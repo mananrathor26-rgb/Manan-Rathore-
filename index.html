@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio of Manan Rathore - First-Year B.Tech ECE Student at JECRC University specializing in Semiconductor & Chip Design, Embedded Systems, and Electronics.">
+    <meta name="keywords" content="Manan Rathore, ECE, Semiconductor, Chip Design, VLSI, Embedded Systems, Arduino, ESP32, JECRC University">
+    <meta name="author" content="Manan Rathore">
+    <title>Manan Rathore | B.Tech ECE — Semiconductor & Chip Design</title>
+
+    <!-- Optional typography enhancement: Google Fonts with local system font fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Core Stylesheet (Pure CSS, zero external library dependency) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Interactive Logic (Vanilla JavaScript, defer loaded) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Skip link for keyboard accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Subtle Silicon Circuit Background Mesh -->
+    <div class="circuit-grid-bg" aria-hidden="true"></div>
+
+    <!-- ========================================================
+         HEADER & NAVIGATION BAR
+         ======================================================== -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <!-- Brand Mark / Logo -->
+            <a href="#home" class="brand-logo" aria-label="Manan Rathore Home">
+                <span class="logo-chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="5" width="14" height="14" rx="2" ry="2"></rect>
+                        <rect x="9" y="9" width="6" height="6"></rect>
+                        <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"></path>
+                    </svg>
+                </span>
+                <span class="logo-text">
+                    <span class="logo-name">Manan Rathore</span>
+                    <span class="logo-badge">ECE / CHIP DESIGN</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation" hidden>
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#education" class="mobile-nav-link">Education</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+                <li><a href="#contact" class="mobile-nav-link mobile-nav-cta">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+
+        <!-- ========================================================
+             SECTION A: HOME / HERO
+             ======================================================== -->
+        <section id="home" class="hero-section" aria-labelledby="hero-title">
+            <div class="section-container hero-grid">
+                
+                <!-- Hero Left: Introduction & Actions -->
+                <div class="hero-content">
+                    <div class="status-indicator-badge">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span class="status-text">First-Year B.Tech ECE • JECRC University</span>
+                    </div>
+
+                    <h1 id="hero-title" class="hero-name">
+                        Hi, I'm <span class="text-gradient">Manan Rathore</span>
+                    </h1>
+
+                    <!-- Dynamic Role Tagline -->
+                    <div class="hero-headline-wrap">
+                        <p class="hero-headline">
+                            <span class="static-prefix">Exploring </span>
+                            <span class="rotating-text" id="rotating-text" aria-live="polite">Semiconductors, Chip Design &amp; Embedded Systems</span>
+                        </p>
+                    </div>
+
+                    <p class="hero-description">
+                        I am a first-year Electronics and Communication Engineering undergraduate focused on building solid foundations in electronic circuits, microcontroller systems, and semiconductor hardware. Driven by curiosity to understand how silicon powers modern computation from physical transistors to functional code.
+                    </p>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore My Projects</span>
+                            <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Icon Links -->
+                    <div class="hero-socials">
+                        <span class="socials-label">Connect:</span>
+                        <div class="social-links-row">
+                            <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Visit Manan's GitHub profile (opens in new tab)">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                                </svg>
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manan-rathore-823b42425/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Visit Manan's LinkedIn profile (opens in new tab)">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                                </svg>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                            <a href="#contact" class="social-icon-btn" aria-label="Send an email to Manan">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span class="sr-only">Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Custom Semiconductor Microchip Graphic -->
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="chip-graphic-container">
+                        <div class="chip-package">
+                            <!-- Outer package pin leads -->
+                            <div class="chip-pins pins-top">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="chip-pins pins-bottom">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="chip-pins pins-left">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="chip-pins pins-right">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+
+                            <!-- Silicon Die Surface -->
+                            <div class="silicon-die">
+                                <div class="die-corner-mark mark-tl"></div>
+                                <div class="die-corner-mark mark-tr"></div>
+                                <div class="die-corner-mark mark-bl"></div>
+                                <div class="die-corner-mark mark-br"></div>
+
+                                <!-- Internal Processor Architecture Blocks -->
+                                <div class="die-core-grid">
+                                    <div class="die-block block-alu">
+                                        <span class="block-code">ALU / LOGIC</span>
+                                        <div class="block-trace-pulse"></div>
+                                    </div>
+                                    <div class="die-block block-ctrl">
+                                        <span class="block-code">CONTROL UNIT</span>
+                                        <div class="block-trace-pulse"></div>
+                                    </div>
+                                    <div class="die-block block-bus">
+                                        <span class="block-code">SYSTEM BUS MATRIX</span>
+                                    </div>
+                                    <div class="die-block block-gpio">
+                                        <span class="block-code">I/O &amp; PERIPHERALS</span>
+                                    </div>
+                                </div>
+
+                                <!-- Center Chip Identifier -->
+                                <div class="die-center-emblem">
+                                    <div class="emblem-core">
+                                        <span class="emblem-silicon">Si</span>
+                                        <span class="emblem-label">VLSI LAB</span>
+                                    </div>
+                                    <div class="clock-ping"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Spec Overlay Tags -->
+                        <div class="chip-telemetry-tag tag-freq">
+                            <span class="dot-indicator"></span>
+                            <span>FREQ: CLOCK SYNC</span>
+                        </div>
+                        <div class="chip-telemetry-tag tag-arch">
+                            <span class="dot-indicator blue"></span>
+                            <span>FOCUS: HARDWARE ROOTS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION B: ABOUT ME
+             ======================================================== -->
+        <section id="about" class="section-padding" aria-labelledby="about-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Background &amp; Curiosity</p>
+                    <h2 id="about-heading" class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- About Personal Narrative -->
+                    <div class="about-narrative-card">
+                        <h3 class="narrative-heading">First-Year ECE Student with a Focus on Silicon &amp; Hardware</h3>
+                        
+                        <p class="narrative-text">
+                            I am a first-year Bachelor of Technology (B.Tech) student in <strong>Electronics and Communication Engineering</strong> at <strong>JECRC University</strong>, specializing in <strong>Semiconductor and Chip Design</strong>.
+                        </p>
+                        
+                        <p class="narrative-text">
+                            My journey began with a natural curiosity about what happens beneath the software layer: how electrons flow through silicon, how logic gates make mathematical decisions, and how microcontrollers interface with real-world physical systems.
+                        </p>
+                        
+                        <p class="narrative-text">
+                            Currently, I have introductory familiarity with prototyping platforms like <strong>Arduino</strong>, alongside early exposure to the <strong>ESP32</strong> and <strong>Raspberry Pi</strong> ecosystem. I spend my study hours developing problem-solving skills, mastering foundational programming, and experimenting with basic circuits on a breadboard.
+                        </p>
+                        
+                        <p class="narrative-text">
+                            My long-term academic aim is to systematically learn semiconductor device physics, digital logic design, computer architecture, and modern VLSI design methodologies.
+                        </p>
+
+                        <div class="about-meta-list">
+                            <div class="meta-item">
+                                <span class="meta-label">Location:</span>
+                                <span class="meta-value">Jaipur, Rajasthan, India</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Current Academic Level:</span>
+                                <span class="meta-value">First Year Undergraduate (2026–2030)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Department:</span>
+                                <span class="meta-value">Electronics &amp; Communication Engineering</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Primary Interest:</span>
+                                <span class="meta-value">Semiconductors, Digital Logic &amp; Embedded Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Currently Learning Section -->
+                    <div class="about-learning-wrap">
+                        <div class="learning-header">
+                            <span class="learning-badge">FOUNDATION IN PROGRESS</span>
+                            <h3 class="learning-title">Currently Learning</h3>
+                            <p class="learning-subtitle">Active study areas where I am currently building foundational competencies:</p>
+                        </div>
+
+                        <div class="learning-cards-grid">
+                            
+                            <!-- Learning Card 1 -->
+                            <div class="learning-card">
+                                <div class="learning-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="learning-card-body">
+                                    <span class="learning-tag">Learning Area 1</span>
+                                    <h4 class="learning-card-title">Programming Fundamentals</h4>
+                                    <p class="learning-card-desc">
+                                        Developing structured algorithmic problem solving, loops, control structures, and memory concepts in foundational languages.
+                                    </p>
+                                    <span class="status-pill">Active Study</span>
+                                </div>
+                            </div>
+
+                            <!-- Learning Card 2 -->
+                            <div class="learning-card">
+                                <div class="learning-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                    </svg>
+                                </div>
+                                <div class="learning-card-body">
+                                    <span class="learning-tag">Learning Area 2</span>
+                                    <h4 class="learning-card-title">Electronics &amp; Digital Logic</h4>
+                                    <p class="learning-card-desc">
+                                        Grasping passive components, Ohm's law, diode/transistor behavior, truth tables, and Boolean algebra foundations.
+                                    </p>
+                                    <span class="status-pill">Active Study</span>
+                                </div>
+                            </div>
+
+                            <!-- Learning Card 3 -->
+                            <div class="learning-card">
+                                <div class="learning-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                        <path d="M9 9h6v6H9z"></path>
+                                        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path>
+                                    </svg>
+                                </div>
+                                <div class="learning-card-body">
+                                    <span class="learning-tag">Learning Area 3</span>
+                                    <h4 class="learning-card-title">Microcontrollers &amp; Embedded Systems</h4>
+                                    <p class="learning-card-desc">
+                                        Exploring GPIO handling, sensor interfacing, and timing basics using Arduino boards, ESP32, and introductory Raspberry Pi concepts.
+                                    </p>
+                                    <span class="status-pill">Active Study</span>
+                                </div>
+                            </div>
+
+                            <!-- Learning Card 4 -->
+                            <div class="learning-card">
+                                <div class="learning-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div class="learning-card-body">
+                                    <span class="learning-tag">Learning Area 4</span>
+                                    <h4 class="learning-card-title">Semiconductor &amp; Chip Design Fundamentals</h4>
+                                    <p class="learning-card-desc">
+                                        Beginning exploration of semiconductor materials, PN-junctions, fabrication concepts, and basic IC architectures.
+                                    </p>
+                                    <span class="status-pill">Active Study</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION C: EDUCATION
+             ======================================================== -->
+        <section id="education" class="section-padding bg-alt" aria-labelledby="education-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Academic Journey</p>
+                    <h2 id="education-heading" class="section-title">Education</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Academic Timeline Card -->
+                <div class="education-card">
+                    <div class="education-card-header">
+                        <div class="edu-badge-wrap">
+                            <span class="edu-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="edu-status-tag">Currently Pursuing • First Year</span>
+                                <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+                                <p class="edu-branch">Electronics and Communication Engineering (ECE)</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-period">
+                            <span class="period-badge">Expected Graduation: 2030</span>
+                        </div>
+                    </div>
+
+                    <div class="education-card-body">
+                        <div class="edu-detail-grid">
+                            
+                            <div class="edu-detail-item">
+                                <span class="detail-label">Specialization</span>
+                                <span class="detail-value text-highlight">Semiconductor and Chip Design</span>
+                            </div>
+
+                            <div class="edu-detail-item">
+                                <span class="detail-label">Institution</span>
+                                <span class="detail-value">JECRC University</span>
+                            </div>
+
+                            <div class="edu-detail-item">
+                                <span class="detail-label">Campus Location</span>
+                                <span class="detail-value">Jaipur, Rajasthan, India</span>
+                            </div>
+
+                            <div class="edu-detail-item">
+                                <span class="detail-label">Academic Standing</span>
+                                <span class="detail-value">First Year Undergraduate</span>
+                            </div>
+
+                        </div>
+
+                        <div class="edu-coursework-block">
+                            <h4 class="coursework-title">Foundational Coursework &amp; Academic Focus</h4>
+                            <p class="coursework-note">
+                                Currently building analytical and engineering foundations in core first-year subjects:
+                            </p>
+                            
+                            <div class="coursework-tags">
+                                <span class="course-tag">Basic Electrical &amp; Electronics Engineering</span>
+                                <span class="course-tag">Engineering Physics (Semiconductor Basics)</span>
+                                <span class="course-tag">Problem Solving &amp; Computer Programming</span>
+                                <span class="course-tag">Engineering Mathematics (Calculus &amp; Algebra)</span>
+                                <span class="course-tag">Basic Electronics Workshop / Laboratory</span>
+                                <span class="course-tag future">Upcoming: Digital Electronics &amp; Logic Circuits</span>
+                            </div>
+                        </div>
+
+                        <!-- Easy-to-edit note for Manan -->
+                        <div class="edu-editable-hint">
+                            <span class="hint-icon" aria-hidden="true">💡</span>
+                            <span class="hint-text">
+                                <em>Editable placeholder note:</em> Academic grades and semester marks will be added here as semester results are released.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION D: SKILLS
+             ======================================================== -->
+        <section id="skills" class="section-padding" aria-labelledby="skills-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Competencies &amp; Technical Roadmaps</p>
+                    <h2 id="skills-heading" class="section-title">Technical Skills &amp; Interests</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">
+                        An honest representation of my current technical familiarity and the subjects I am actively pursuing. No exaggerated ratings or claims.
+                    </p>
+                </div>
+
+                <!-- Skill Categories Grid -->
+                <div class="skills-categories-grid">
+
+                    <!-- Category 1: Programming -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="4 17 10 11 4 5"></polyline>
+                                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="category-title">Programming</h3>
+                                <p class="category-desc">Core coding fundamentals &amp; syntax</p>
+                            </div>
+                        </div>
+
+                        <div class="skills-items-list">
+                            
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Programming Fundamentals</span>
+                                    <span class="level-badge badge-beginner">Beginner</span>
+                                </div>
+                                <p class="skill-description">Logic development, conditional statements, loops, and basic data types.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">C / C++</span>
+                                    <span class="level-badge badge-learning">Learning Fundamentals</span>
+                                </div>
+                                <p class="skill-description">Studying syntax, functions, pointer concepts, and memory principles essential for embedded systems.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Python</span>
+                                    <span class="level-badge badge-next">Learning Next</span>
+                                </div>
+                                <p class="skill-description">Planned language for hardware scripting, data logging, and scientific simulation.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">HTML &amp; CSS</span>
+                                    <span class="level-badge badge-beginner">Foundational Basics</span>
+                                </div>
+                                <p class="skill-description">Basic markup and styling used to document projects and maintain this personal portfolio.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Electronics and Hardware -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                    <circle cx="9" cy="9" r="1"></circle>
+                                    <circle cx="15" cy="9" r="1"></circle>
+                                    <circle cx="9" cy="15" r="1"></circle>
+                                    <circle cx="15" cy="15" r="1"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="category-title">Electronics &amp; Hardware</h3>
+                                <p class="category-desc">Hands-on microcontrollers &amp; lab work</p>
+                            </div>
+                        </div>
+
+                        <div class="skills-items-list">
+                            
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Arduino</span>
+                                    <span class="level-badge badge-familiar">Basic Familiarity</span>
+                                </div>
+                                <p class="skill-description">Basic sketch development, analog/digital I/O, and connecting LEDs, buzzers, and basic sensors.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">ESP32</span>
+                                    <span class="level-badge badge-exposure">Introductory Exposure</span>
+                                </div>
+                                <p class="skill-description">Introductory awareness of Wi-Fi / Bluetooth enabled microcontroller features and pinout.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Raspberry Pi</span>
+                                    <span class="level-badge badge-exposure">Introductory Exposure</span>
+                                </div>
+                                <p class="skill-description">Introductory exposure to Single Board Computers (SBCs) and Linux-based system operation.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Microcontroller Systems</span>
+                                    <span class="level-badge badge-familiar">Foundational Familiarity</span>
+                                </div>
+                                <p class="skill-description">Understanding core clock concepts, GPIO pinout, power rails, and basic serial communication.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Basic Circuit Electronics</span>
+                                    <span class="level-badge badge-learning">Developing Foundations</span>
+                                </div>
+                                <p class="skill-description">Breadboard prototyping, resistors, capacitors, multimeter measurement, and circuit schematics.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Areas of Interest -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="12 6 12 12 16 14"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="category-title">Areas of Interest</h3>
+                                <p class="category-desc">Academic &amp; research horizons</p>
+                            </div>
+                        </div>
+
+                        <div class="skills-items-list">
+                            
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Semiconductor Devices &amp; Physics</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">Understanding band theory, charge carriers, PN-junctions, and MOSFET behavior at the silicon level.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Digital Electronics &amp; Logic Design</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">Combinational and sequential circuits, flip-flops, registers, counters, and finite state machines.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Integrated Circuits (ICs)</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">Monolithic fabrication, wafer manufacturing processes, packaging, and cleanroom technologies.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">VLSI &amp; Chip Design</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">Hardware description languages (HDL), CMOS logic, RTL design, and ASIC/FPGA workflows.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Embedded Systems</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">Real-time firmware, hardware-software co-design, bus protocols (I2C, SPI, UART), and low-power systems.</p>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span class="skill-name">Computer Architecture</span>
+                                    <span class="level-badge badge-interest">Interested In</span>
+                                </div>
+                                <p class="skill-description">CPU pipelining, memory hierarchy, cache organization, instruction sets (RISC-V / ARM), and hardware acceleration.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Skill Level Legend -->
+                <div class="skill-legend-bar">
+                    <span class="legend-title">Level Key:</span>
+                    <div class="legend-items">
+                        <span class="legend-chip"><span class="legend-color color-beginner"></span> Beginner / Foundational</span>
+                        <span class="legend-chip"><span class="legend-color color-familiar"></span> Basic Familiarity</span>
+                        <span class="legend-chip"><span class="legend-color color-exposure"></span> Introductory Exposure</span>
+                        <span class="legend-chip"><span class="legend-color color-learning"></span> Currently Learning</span>
+                        <span class="legend-chip"><span class="legend-color color-interest"></span> Interested In (Future Target)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION E: PROJECTS
+             ======================================================== -->
+        <section id="projects" class="section-padding bg-alt" aria-labelledby="projects-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Hands-On Exploration</p>
+                    <h2 id="projects-heading" class="section-title">Projects &amp; Experiments</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">
+                        Editable starter templates reflecting my current developmental stages. As I complete each project in college and in my lab, full details, schematics, and GitHub code will be added here.
+                    </p>
+                </div>
+
+                <!-- Projects Cards Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project Card 1: Arduino Starter Template -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-type-tag">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <span>Microcontroller</span>
+                            </div>
+                            <span class="project-status-badge badge-planned">Planned</span>
+                        </div>
+
+                        <!-- Technical Card Motif -->
+                        <div class="project-visual-motif">
+                            <div class="circuit-diagram-placeholder">
+                                <div class="circuit-wire wire-h"></div>
+                                <div class="circuit-node node-1"></div>
+                                <div class="circuit-node node-2"></div>
+                                <div class="circuit-wire wire-v"></div>
+                                <span class="motif-label">ARDUINO PROTOTYPE TEMPLATE</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-title">[Your Arduino Project]</h3>
+                            
+                            <p class="project-desc">
+                                <em>Editable placeholder:</em> A starter project template for an Arduino-based circuit — such as an automated sensor monitor, digital thermometer, or ultrasonic obstacle detector.
+                            </p>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Planned Components / Technologies:</h4>
+                                <div class="tech-tags-list">
+                                    <span class="tech-tag">Arduino Uno / Nano</span>
+                                    <span class="tech-tag">C / C++ (Arduino IDE)</span>
+                                    <span class="tech-tag">Sensors (DHT / Ultrasonic)</span>
+                                    <span class="tech-tag">Breadboard &amp; Jumper Wires</span>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Learning Objectives:</h4>
+                                <ul class="learning-goals-list">
+                                    <li>Interfacing analog and digital sensors with microcontroller I/O pins.</li>
+                                    <li>Reading sensor signals, handling debouncing, and serial output logging.</li>
+                                    <li>Circuit debugging with a digital multimeter.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-card-footer">
+                            <div class="repo-link-wrap">
+                                <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="project-link disabled-link" aria-label="GitHub Repository placeholder for Arduino Project">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                                    </svg>
+                                    <span>Code Repository (Add link when ready)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2: ESP32 Starter Template -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-type-tag">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                                </svg>
+                                <span>Wireless &amp; IoT</span>
+                            </div>
+                            <span class="project-status-badge badge-planned">Planned</span>
+                        </div>
+
+                        <!-- Technical Card Motif -->
+                        <div class="project-visual-motif">
+                            <div class="circuit-diagram-placeholder">
+                                <div class="circuit-wire wire-h"></div>
+                                <div class="circuit-node node-1"></div>
+                                <div class="circuit-node node-3"></div>
+                                <div class="circuit-wire wire-v"></div>
+                                <span class="motif-label">ESP32 WIRELESS NODE TEMPLATE</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-title">[Your ESP32 Project]</h3>
+                            
+                            <p class="project-desc">
+                                <em>Editable placeholder:</em> A starter template for an ESP32 microcontroller application — such as Wi-Fi telemetry transmission, basic web server control, or Bluetooth sensor connectivity.
+                            </p>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Planned Components / Technologies:</h4>
+                                <div class="tech-tags-list">
+                                    <span class="tech-tag">ESP32 Dev Module</span>
+                                    <span class="tech-tag">C++ / ESP-IDF / Arduino</span>
+                                    <span class="tech-tag">Wi-Fi / BLE Protocol</span>
+                                    <span class="tech-tag">I2C / SPI Sensors</span>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Learning Objectives:</h4>
+                                <ul class="learning-goals-list">
+                                    <li>Exploring dual-core microcontroller architecture and FreeRTOS basics.</li>
+                                    <li>Implementing simple wireless packet transmission over local Wi-Fi.</li>
+                                    <li>Managing power modes and pin multiplexing.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-card-footer">
+                            <div class="repo-link-wrap">
+                                <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="project-link disabled-link" aria-label="GitHub Repository placeholder for ESP32 Project">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                                    </svg>
+                                    <span>Code Repository (Add link when ready)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: Electronics / Digital Logic Starter Template -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-type-tag">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <circle cx="6" cy="6" r="3"></circle>
+                                    <circle cx="6" cy="18" r="3"></circle>
+                                    <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                                    <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                                    <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                                </svg>
+                                <span>Digital Logic &amp; Circuits</span>
+                            </div>
+                            <span class="project-status-badge badge-planned">Planned</span>
+                        </div>
+
+                        <!-- Technical Card Motif -->
+                        <div class="project-visual-motif">
+                            <div class="circuit-diagram-placeholder">
+                                <div class="circuit-wire wire-h"></div>
+                                <div class="circuit-node node-2"></div>
+                                <div class="circuit-node node-3"></div>
+                                <div class="circuit-wire wire-v"></div>
+                                <span class="motif-label">DIGITAL LOGIC LAB TEMPLATE</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-title">[Your Electronics or Digital Logic Project]</h3>
+                            
+                            <p class="project-desc">
+                                <em>Editable placeholder:</em> A starter template for a foundational hardware experiment — such as verifying truth tables with 74xx ICs, designing a binary adder, or simulating a basic counter.
+                            </p>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Planned Components / Technologies:</h4>
+                                <div class="tech-tags-list">
+                                    <span class="tech-tag">74-Series Logic ICs</span>
+                                    <span class="tech-tag">Breadboard / Power Supply</span>
+                                    <span class="tech-tag">Circuit Simulation Tools</span>
+                                    <span class="tech-tag">LEDs, Switches &amp; Resistors</span>
+                                </div>
+                            </div>
+
+                            <div class="project-detail-section">
+                                <h4 class="detail-heading">Learning Objectives:</h4>
+                                <ul class="learning-goals-list">
+                                    <li>Translating boolean expressions into physical gate wiring.</li>
+                                    <li>Analyzing propagation delay and logic level voltages (TTL/CMOS).</li>
+                                    <li>Building building blocks for arithmetic logic units (ALUs).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-card-footer">
+                            <div class="repo-link-wrap">
+                                <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="project-link disabled-link" aria-label="GitHub Repository placeholder for Digital Logic Project">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                                    </svg>
+                                    <span>Code Repository (Add link when ready)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Guidance note for Manan -->
+                <div class="projects-guide-note">
+                    <p>
+                        <strong>How to update:</strong> When you start building a real project in your lab or home bench, open <code>index.html</code>, update the title, swap the status from <code>Planned</code> to <code>In Progress</code> or <code>Completed</code>, add your components, and paste your actual GitHub repository URL.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION F: CERTIFICATIONS AND ACHIEVEMENTS
+             ======================================================== -->
+        <section id="certifications" class="section-padding" aria-labelledby="certs-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Milestones &amp; Credentials</p>
+                    <h2 id="certs-heading" class="section-title">Certifications &amp; Achievements</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Professional Empty State -->
+                <div class="certifications-empty-state">
+                    <div class="empty-state-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+
+                    <h3 class="empty-state-title">Building Foundations</h3>
+                    <p class="empty-state-message">
+                        I am currently in my first year and focused on core coursework. Verified certifications, technical workshops, competition milestones, and achievements will be documented here as I earn them throughout my degree.
+                    </p>
+
+                    <!-- Pre-formatted Editable Template Card (Visible as a structured template) -->
+                    <div class="cert-template-box">
+                        <div class="cert-template-header">
+                            <span class="template-tag">Future Credential Template</span>
+                            <span class="template-badge">Ready to Populate</span>
+                        </div>
+                        
+                        <div class="cert-template-grid">
+                            <div class="cert-field">
+                                <span class="cert-field-label">Field / Subject</span>
+                                <span class="cert-field-val">[Electronics and Communication]</span>
+                            </div>
+                            <div class="cert-field">
+                                <span class="cert-field-label">Issuing Body / Institution</span>
+                                <span class="cert-field-val">[JECRC University / Workshop Provider]</span>
+                            </div>
+                            <div class="cert-field">
+                                <span class="cert-field-label">Completion Target</span>
+                                <span class="cert-field-val">[2030 / Milestone Date]</span>
+                            </div>
+                            <div class="cert-field">
+                                <span class="cert-field-label">Verification Link</span>
+                                <span class="cert-field-val">[Credential URL, if available]</span>
+                            </div>
+                        </div>
+
+                        <p class="cert-template-hint">
+                            <em>Note:</em> No artificial awards or certificates are listed here to maintain strict academic honesty.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECTION G: CONTACT
+             ======================================================== -->
+        <section id="contact" class="section-padding bg-alt" aria-labelledby="contact-heading">
+            <div class="section-container">
+                
+                <!-- Section Header -->
+                <div class="section-header">
+                    <p class="section-tagline">Let's Connect</p>
+                    <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">
+                        Whether you are a fellow engineering student, professor, mentor, or recruiter interested in collaborating or discussing semiconductor technology and embedded systems, I'd welcome the chance to connect.
+                    </p>
+                </div>
+
+                <div class="contact-layout-grid">
+                    
+                    <!-- Contact Channels Info -->
+                    <div class="contact-info-panel">
+                        <h3 class="panel-title">Direct Channels</h3>
+                        <p class="panel-desc">
+                            Feel free to reach out directly via email or connect on LinkedIn and GitHub.
+                        </p>
+
+                        <div class="contact-cards-stack">
+                            
+                            <!-- Email Card -->
+                            <div class="contact-channel-card">
+                                <div class="channel-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="channel-text">
+                                    <span class="channel-label">Email (Clickable mailto)</span>
+                                    <!-- Editable email placeholder -->
+                                    <a href="mailto:mananrathore.ece@example.com?subject=Hello%20Manan%20-%20ECE%20Portfolio%20Inquiry" class="channel-link" id="email-contact-link">
+                                        mananrathore.ece@example.com
+                                    </a>
+                                    <span class="channel-subtext">Click to open your mail client</span>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn Card -->
+                            <div class="contact-channel-card">
+                                <div class="channel-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </div>
+                                <div class="channel-text">
+                                    <span class="channel-label">LinkedIn Profile</span>
+                                    <a href="https://www.linkedin.com/in/manan-rathore-823b42425/" target="_blank" rel="noopener noreferrer" class="channel-link">
+                                        linkedin.com/in/manan-rathore-823b42425
+                                    </a>
+                                    <span class="channel-subtext">Professional network &amp; updates</span>
+                                </div>
+                            </div>
+
+                            <!-- GitHub Card -->
+                            <div class="contact-channel-card">
+                                <div class="channel-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                                    </svg>
+                                </div>
+                                <div class="channel-text">
+                                    <span class="channel-label">GitHub Profile</span>
+                                    <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="channel-link">
+                                        github.com/mananrathor26-rgb
+                                    </a>
+                                    <span class="channel-subtext">Code, practice labs &amp; repositories</span>
+                                </div>
+                            </div>
+
+                            <!-- Location Card -->
+                            <div class="contact-channel-card">
+                                <div class="channel-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="channel-text">
+                                    <span class="channel-label">Location</span>
+                                    <span class="channel-static-val">Jaipur, Rajasthan, India</span>
+                                    <span class="channel-subtext">JECRC University Campus</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Client-Side Validated Contact Form -->
+                    <div class="contact-form-panel">
+                        <div class="form-header">
+                            <h3 class="panel-title">Send a Message</h3>
+                            <p class="panel-desc">
+                                As a static website without a server backend, submitting this form will prepare a pre-filled email in your client, or copy the formatted text directly to your clipboard.
+                            </p>
+                        </div>
+
+                        <form id="contact-form" class="contact-form" novalidate>
+                            
+                            <div class="form-group">
+                                <label for="sender-name" class="form-label">Your Name <span class="required-mark">*</span></label>
+                                <input type="text" id="sender-name" name="name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+                                <span class="form-error-msg" id="name-error">Please enter your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email" class="form-label">Your Email <span class="required-mark">*</span></label>
+                                <input type="email" id="sender-email" name="email" class="form-input" placeholder="e.g. johndoe@example.com" required autocomplete="email">
+                                <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="msg-subject" class="form-label">Subject <span class="required-mark">*</span></label>
+                                <input type="text" id="msg-subject" name="subject" class="form-input" placeholder="e.g. Student Project Collaboration / Semiconductor Discussion" required>
+                                <span class="form-error-msg" id="subject-error">Please enter a subject.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="msg-content" class="form-label">Message <span class="required-mark">*</span></label>
+                                <textarea id="msg-content" name="message" class="form-textarea" rows="4" placeholder="Hello Manan, I came across your portfolio..." required></textarea>
+                                <span class="form-error-msg" id="content-error">Please enter your message.</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <span>Open Email with Message</span>
+                                    <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Feedback Message Box (honest & client-side) -->
+                        <div id="form-feedback" class="form-feedback-card" hidden>
+                            <div class="feedback-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feedback-content">
+                                <h4 class="feedback-heading">Email Prepared</h4>
+                                <p class="feedback-text" id="feedback-message">
+                                    Your email application has been launched with your pre-filled message. If your browser did not automatically open it, click below to copy the message text.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" id="copy-message-btn">
+                                    <span>Copy Formatted Message</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================
+         SECTION H: FOOTER
+         ======================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <div class="footer-top-row">
+                
+                <!-- Footer Identity -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-chip-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="5" y="5" width="14" height="14" rx="2"></rect>
+                                <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"></path>
+                            </svg>
+                        </span>
+                        <span class="footer-name">Manan Rathore</span>
+                    </div>
+                    <p class="footer-tagline">
+                        ECE Student | Learning Electronics, Embedded Systems &amp; Semiconductor Technology at JECRC University.
+                    </p>
+                </div>
+
+                <!-- Footer Quick Navigation -->
+                <div class="footer-nav-block">
+                    <h4 class="footer-nav-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Socials -->
+                <div class="footer-social-block">
+                    <h4 class="footer-nav-title">Connect</h4>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/mananrathor26-rgb" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Manan's GitHub profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/manan-rathore-823b42425/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Manan's LinkedIn profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Row -->
+            <div class="footer-bottom-row">
+                <p class="copyright-text">
+                    &copy; <span id="current-year">2026</span> Manan Rathore. All rights reserved.
+                </p>
+                <p class="tech-credit-text">
+                    Built with clean semantic HTML5, modern CSS3 &amp; Vanilla JavaScript &bull; Offline Ready
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top of page" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+</body>
+</html>
